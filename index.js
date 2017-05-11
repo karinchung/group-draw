@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 })
 
 wsServer.on('connection', function(socket) {
-  console.log('a user connected')
+  console.log('a user connected!')
   socket.on('dragged', function(d) {
     // console.log('someone is painting', d)
     wsServer.emit('global-drag', d)
